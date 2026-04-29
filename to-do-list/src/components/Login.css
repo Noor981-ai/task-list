@@ -1,0 +1,135 @@
+.login-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(140deg, #fbd5e5 0%, #e9ddff 52%, #d7edff 100%);
+  padding: 16px;
+  position: relative;
+  overflow: hidden;
+}
+
+.login-box {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 40px;
+  border-radius: 22px;
+  width: 340px;
+  text-align: center;
+  box-shadow: 0 20px 45px rgba(146, 126, 167, 0.28);
+  border: 1px solid #f0dbea;
+  backdrop-filter: blur(3px);
+  position: relative;
+  z-index: 2;
+  animation: cardFloat 4s ease-in-out infinite;
+}
+
+.login-subtitle {
+  margin-top: -4px;
+  margin-bottom: 18px;
+  color: #7a6b7f;
+  font-size: 14px;
+}
+
+.login-box input {
+  width: 100%;
+  margin: 10px 0;
+  padding: 11px 12px;
+  border: 1px solid #e6ccdb;
+  border-radius: 8px;
+  font-size: 14px;
+  box-sizing: border-box;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.login-box input:focus {
+  outline: none;
+  border-color: #b495ef;
+  box-shadow: 0 0 0 3px rgba(180, 149, 239, 0.2);
+}
+
+.login-box button {
+  width: 100%;
+  margin-top: 10px;
+  padding: 10px;
+  background: linear-gradient(90deg, #a087f5, #d08eb6);
+  color: white;
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.login-box button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 18px rgba(160, 135, 245, 0.35);
+}
+
+.login-box button:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+.google-btn {
+  background: linear-gradient(90deg, #ee94a7, #e66a5b);
+}
+
+.form-error {
+  margin: 8px 0 2px;
+  color: #dc2626;
+  font-size: 13px;
+}
+
+.login-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(1px);
+  z-index: 1;
+}
+
+.orb-one {
+  width: 180px;
+  height: 180px;
+  background: rgba(212, 146, 197, 0.35);
+  top: 8%;
+  left: 10%;
+  animation: drift 10s ease-in-out infinite;
+}
+
+.orb-two {
+  width: 240px;
+  height: 240px;
+  background: rgba(173, 153, 241, 0.3);
+  right: 8%;
+  bottom: 10%;
+  animation: drift 13s ease-in-out infinite reverse;
+}
+
+.orb-three {
+  width: 120px;
+  height: 120px;
+  background: rgba(132, 208, 246, 0.28);
+  right: 20%;
+  top: 14%;
+  animation: drift 9s ease-in-out infinite;
+}
+
+@keyframes drift {
+  0%,
+  100% {
+    transform: translateY(0px) translateX(0px);
+  }
+  50% {
+    transform: translateY(-16px) translateX(8px);
+  }
+}
+
+@keyframes cardFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+}

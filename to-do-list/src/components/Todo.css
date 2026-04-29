@@ -1,0 +1,184 @@
+.planner-shell {
+  padding: 24px;
+}
+
+.planner-card {
+  max-width: 980px;
+  margin: 0 auto 24px;
+  border-radius: 20px;
+  padding: 28px;
+  background: var(--card-bg);
+  color: var(--text-main);
+  border: 1px solid var(--border-color);
+  box-shadow: 0 12px 30px rgba(148, 163, 184, 0.25);
+}
+
+.planner-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.planner-head h2 {
+  margin: 0;
+  font-size: 52px;
+  line-height: 1;
+  font-weight: 700;
+  color: #914e6d;
+}
+
+.planner-head h2 span {
+  margin-right: 6px;
+}
+
+.planner-head h2 {
+  font-family: Georgia, "Times New Roman", serif;
+}
+
+.planner-head h2 em {
+  font-family: "Brush Script MT", cursive;
+  font-style: normal;
+  font-weight: 500;
+  color: #51508a;
+}
+
+.planner-head p {
+  margin: 0;
+  font-size: 16px;
+  color: var(--text-soft);
+  font-weight: 600;
+}
+
+.input-box {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.input-box input {
+  flex: 1;
+  padding: 12px;
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  background: var(--input-bg);
+  color: var(--text-main);
+}
+
+.input-box button {
+  background: #8b5cf6;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 12px 14px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.planner-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin-top: 12px;
+}
+
+.planner-task-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.planner-task-item {
+  display: flex;
+  align-items: center;
+  min-height: 42px;
+  border-radius: 999px;
+  padding: 0 14px 0 10px;
+}
+
+.task-dot {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #f8fafc;
+  border: 2px solid rgba(255, 255, 255, 0.85);
+  margin-right: 10px;
+  flex-shrink: 0;
+}
+
+.task-text {
+  flex: 1;
+  color: #5b5266;
+  font-weight: 600;
+}
+
+.planner-task-item.empty .task-text {
+  opacity: 0.25;
+}
+
+.row-lilac { background: #c5b8f3; }
+.row-purple { background: #b79dd8; }
+.row-pink { background: #e7b5cf; }
+.row-rose { background: #f0c8d7; }
+.row-peach { background: #f4dddc; }
+
+.delete-btn {
+  background: #ffffffcc;
+  color: #7f1d1d;
+  border: none;
+  border-radius: 999px;
+  width: 24px;
+  height: 24px;
+  line-height: 20px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.task-error {
+  color: #dc2626;
+  font-size: 13px;
+  margin: 0 0 8px;
+}
+
+.theme-light {
+  --card-bg: #fffafc;
+  --text-main: #1f2937;
+  --text-soft: #6b7280;
+  --input-bg: #ffffff;
+  --border-color: #f2d9e4;
+  min-height: 100vh;
+  background: #fef6f9;
+}
+
+.theme-dark {
+  --card-bg: #1f1b2e;
+  --text-main: #f5ecff;
+  --text-soft: #d8c9e8;
+  --input-bg: #2a2540;
+  --border-color: #443d5d;
+  min-height: 100vh;
+  background: #151221;
+}
+
+.theme-dark .task-text {
+  color: #eadcf8;
+}
+
+@media (max-width: 900px) {
+  .planner-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .planner-head {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .planner-head h2 {
+    font-size: 40px;
+  }
+}

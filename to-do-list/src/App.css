@@ -1,0 +1,11 @@
+.app-shell {
+  min-height: 100vh;
+}
+
+body {
+  transition: background-color 0.2s ease;
+}
+
+body.app-dark {
+  background: #020617;
+}

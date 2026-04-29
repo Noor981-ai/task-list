@@ -1,0 +1,70 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(90deg, #f7dde8 0%, #e8dcfb 50%, #dce8ff 100%);
+  color: #6e3f5e;
+  padding: 14px 24px;
+  border-bottom: 1px solid #eed6e6;
+}
+
+.navbar h2 {
+  margin: 0;
+  font-family: Georgia, "Times New Roman", serif;
+  color: #8b4d69;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.username {
+  max-width: 200px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #7b5c70;
+  font-weight: 600;
+}
+
+.theme-btn,
+.logout-btn {
+  border: none;
+  padding: 8px 15px;
+  color: #fff;
+  border-radius: 999px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.theme-btn {
+  background: #9a83ef;
+}
+
+.logout-btn {
+  background: #e88da8;
+}
+
+.theme-dark .navbar {
+  background: linear-gradient(90deg, #2d2440 0%, #31294c 50%, #2a3557 100%);
+  color: #f0e7f8;
+  border-bottom-color: #4b3f67;
+}
+
+.theme-dark .navbar h2 {
+  color: #f4d6e5;
+}
+
+.theme-dark .username {
+  color: #dfcaec;
+}
+
+.theme-dark .theme-btn {
+  background: #7f64da;
+}
+
+.theme-dark .logout-btn {
+  background: #c86f91;
+}
